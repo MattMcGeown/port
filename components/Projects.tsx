@@ -14,8 +14,11 @@ const Projects = (props: Props) => {
     >
       <h3 className="heading_h3">Projects</h3>
       <div className="relative z-20 flex w-full overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin">
-        {projects.map((project) => (
-          <div className="flex flex-col items-center justify-center flex-shrink-0 w-screen h-screen p-20 -mb-5 space-y-5 snap-center md:p-44">
+        {projects.map((project, i) => (
+          <div
+            className="flex flex-col items-center justify-center flex-shrink-0 w-screen h-screen p-20 -mb-5 space-y-5 snap-center md:p-44"
+            key={i}
+          >
             <motion.img
               initial={{ y: -300, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
